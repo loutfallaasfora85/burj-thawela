@@ -9,7 +9,7 @@ const cairo = Cairo({
   weight: ["300", "400", "500", "600", "700", "800", "900"],
 });
 
-const siteUrl = "https://homelly-tech.com";
+const siteUrl = "https://burjjstorre.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -42,10 +42,10 @@ export const metadata: Metadata = {
       "برج المبدع للأجهزة المنزلية - وجهتكم الأولى لأحدث الأجهزة الإلكترونية والتقنيات المنزلية والمكتبية. نوفر لكم أحدث الابتكارات التقنية من أرقى الماركات العالمية.",
     images: [
       {
-        url: `${siteUrl}/og-image.webp`,
+        url: `${siteUrl}/logo.webp`,
         width: 1200,
         height: 630,
-        alt: "مدار للأجهزة المنزلية",
+        alt: "برج المبدع للأجهزة المنزلية",
         type: "image/webp",
       },
     ],
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     title: "برج المبدع للأجهزة المنزلية | أفضل الأجهزة بأعلى جودة وأفضل سعر",
     description:
       "برج المبدع للأجهزة المنزلية - وجهتكم الأولى لأحدث الأجهزة الإلكترونية والتقنيات المنزلية والمكتبية.",
-    images: [`${siteUrl}/og-image.webp`],
+    images: [`${siteUrl}/logo.webp`],
   },
   robots: {
     index: true,

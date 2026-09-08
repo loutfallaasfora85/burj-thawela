@@ -1,11 +1,11 @@
-import Header from "../components/Header";
+﻿import Header from "../components/Header";
 import Footer from "../components/Footer";
 import WhatsAppButton from "../components/WhatsAppButton";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "سياسة الشحن | لمسة للأجهزة المنزلية",
-  description: "سياسة الشحن والتوصيل للمسة للأجهزة المنزلية",
+  title: "سياسة الشحن | برج المبدع للأجهزة المنزلية",
+  description: "سياسة الشحن والتوصيل لبرج المبدع للأجهزة المنزلية",
 };
 
 export default function ShippingPolicyPage() {
@@ -94,3 +94,4 @@ export default function ShippingPolicyPage() {
     </>
   );
 }
+
