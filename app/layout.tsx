@@ -42,7 +42,7 @@ export const metadata: Metadata = {
       "أحدث الأجهزة الإلكترونية والمنزلية بأفضل الأسعار — تسوق الآن من برج المبدع.",
     images: [
       {
-        url: `${siteUrl}/og-image.webp`,
+        url: `${siteUrl}/logo.webp`,
         width: 1200,
         height: 630,
         alt: "برج المبدع للأجهزة المنزلية",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     title: "برج المبدع للأجهزة المنزلية | جودة وأسعار لا تُنافس",
     description:
       "أحدث الأجهزة الإلكترونية والمنزلية بأفضل الأسعار — تسوق الآن من برج المبدع.",
-    images: [`${siteUrl}/og-image.webp`],
+    images: [`${siteUrl}/logo.webp`],
   },
   robots: {
     index: true,
