@@ -3,8 +3,8 @@ import Footer from "../components/Footer";
 import WhatsAppButton from "../components/WhatsAppButton";
 
 export const metadata = {
-  title: "من نحن | برج المبدع للأجهزة المنزلية",
-  description: "تعرف على برج المبدع للأجهزة المنزلية - وجهتكم الأولى لأحدث الأجهزة الإلكترونية في المملكة العربية السعودية",
+  title: "من نحن | برج المبدع للأثاث المنزلي",
+  description: "تعرف على برج المبدع للأثاث المنزلي - وجهتكم الأولى لأحدث المفروشات والأثاث في المملكة العربية السعودية",
 };
 
 export default function AboutPage() {
@@ -16,19 +16,19 @@ export default function AboutPage() {
         <section className="text-center mb-10 md:mb-16">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-secondary mb-4">من نحن</h1>
           <p className="text-on-surface-variant text-base sm:text-lg max-w-2xl mx-auto">
-            برج المبدع - شريككم الموثوق في عالم التقنية
+            برج المبدع - شريككم الموثوق في عالم الأثاث والمفروشات
           </p>
         </section>
 
         {/* About Section */}
         <section className="grid md:grid-cols-2 gap-8 md:gap-12 mb-10 md:mb-16">
           <div>
-            <h2 className="text-2xl font-bold text-on-surface mb-4">برج المبدع للأجهزة المنزلية</h2>
+            <h2 className="text-2xl font-bold text-on-surface mb-4">برج المبدع للأثاث المنزلي</h2>
             <p className="text-on-surface-variant leading-relaxed mb-4">
-              نحن مؤسسة سعودية متخصصة في توفير أحدث الأجهزة المنزلية بأعلى جودة وأفضل الأسعار. نسعى لأن نكون الوجهة الأولى لعملائنا في المملكة العربية السعودية.
+              نحن مؤسسة سعودية متخصصة في توفير أحدث المفروشات والأثاث المنزلي بأعلى جودة وأفضل الأسعار. نسعى لأن نكون الوجهة الأولى لعملائنا في المملكة العربية السعودية.
             </p>
             <p className="text-on-surface-variant leading-relaxed">
-              نؤمن بأن التقنية يجب أن تكون في متناول الجميع، ولذلك نحرص على تقديم منتجات عالية الجودة بأسعار تنافسية مع خدمة عملاء متميزة تضمن رضاكم التام.
+              نؤمن بأن بيتك يستحق الأفضل، ولذلك نحرص على تقديم منتجات عالية الجودة بأسعار تنافسية مع خدمة عملاء متميزة تضمن رضاكم التام.
             </p>
           </div>
           <div className="bg-surface-container-low rounded-2xl p-5 sm:p-8 border border-outline-variant/30">
@@ -36,7 +36,7 @@ export default function AboutPage() {
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <span className="material-symbols-outlined text-secondary">store</span>
-                <span className="text-on-surface-variant">برج المبدع للأجهزة المنزلية</span>
+                <span className="text-on-surface-variant">برج المبدع للأثاث المنزلي</span>
               </div>
               <div className="flex items-center gap-3">
                 <span className="material-symbols-outlined text-secondary">verified</span>
@@ -78,13 +78,13 @@ export default function AboutPage() {
           <div className="bg-secondary/5 rounded-2xl p-5 sm:p-8 border border-secondary/20">
             <h3 className="text-lg sm:text-xl font-bold text-secondary mb-3">رؤيتنا</h3>
             <p className="text-on-surface-variant leading-relaxed">
-              أن نكون المنصة الرائدة في مجال الأجهزة الإلكترونية في المملكة العربية السعودية، ونقدم تجربة تسوق إلكتروني متميزة وموثوقة.
+              أن نكون المنصة الرائدة في مجال الأثاث والمفروشات المنزلية في المملكة العربية السعودية، ونقدم تجربة تسوق إلكتروني متميزة وموثوقة.
             </p>
           </div>
           <div className="bg-secondary/5 rounded-2xl p-5 sm:p-8 border border-secondary/20">
             <h3 className="text-lg sm:text-xl font-bold text-secondary mb-3">رسالتنا</h3>
             <p className="text-on-surface-variant leading-relaxed">
-              توفير أحدث الأجهزة الإلكترونية بجودة عالية وأسعار تنافسية، مع تقديم خدمة عملاء استثنائية تلبي تطلعات عملائنا وتتجاوز توقعاتهم.
+              توفير أحدث المفروشات والأثاث المنزلي بجودة عالية وأسعار تنافسية، مع تقديم خدمة عملاء استثنائية تلبي تطلعات عملائنا وتتجاوز توقعاتهم.
             </p>
           </div>
         </section>
