@@ -22,13 +22,10 @@ interface Product {
 }
 
 const CATEGORY_LABELS: Record<string, string> = {
-  home_devices: "أجهزة منزلية",
-  tvs: "شاشات",
-  refrigerators: "تلاجات",
-  washing_machines: "غسالات",
-  air_conditioners: "مكيفات",
-  ovens: "أفران",
-  small_appliances: "أجهزة صغيرة",
+  bedroom: "غرف نوم",
+  living_room: "غرف معيشة",
+  office_furniture: "أثاث مكتبي",
+  outdoor_furniture: "أثاث خارجي",
 };
 
 const VISIBLE_CATEGORIES = Object.keys(CATEGORY_LABELS);
@@ -56,11 +53,11 @@ function ProductsContent() {
 
   const setFilter = (key: string) => {
     if (key === "all") router.push("/products");
-    else router.push(`/products?subCategory=${key}`);
+    else router.push(`/products?category=${key}`);
   };
 
   useEffect(() => {
-    fetch(`${API_URL}/api/products`)
+    fetch(`${API_URL}/api/products?limit=500`)
       .then((res) => res.json())
       .then((data) => {
         setProducts(data.data || data.products || data || []);
@@ -84,11 +81,11 @@ function ProductsContent() {
     setTimeout(() => setAddedId(null), 1500);
   };
 
+  const FURNITURE_CATEGORIES = ["bedroom", "living_room", "office_furniture", "outdoor_furniture"];
+
   const filtered = products.filter((p) => {
-    const matchCategory =
-      activeCategory === "all" ||
-      p.category === activeCategory ||
-      p.subCategory === activeCategory;
+    if (!FURNITURE_CATEGORIES.includes(p.category)) return false;
+    const matchCategory = activeCategory === "all" || p.category === activeCategory;
     const matchSearch = !searchQuery || p.name.includes(searchQuery) || p.brand?.includes(searchQuery);
     return matchCategory && matchSearch;
   });
@@ -194,7 +191,7 @@ function ProductsContent() {
                 <div className="p-3 sm:p-4 md:p-5 flex flex-col gap-1.5 sm:gap-2.5">
                   <div className="flex items-center justify-between">
                     <span className="text-[9px] sm:text-[11px] text-secondary font-semibold bg-secondary/10 px-1.5 sm:px-2.5 py-0.5 rounded-md truncate">
-                      {CATEGORY_LABELS[product.subCategory || product.category] || product.category}
+                      {CATEGORY_LABELS[product.category] || product.category}
                     </span>
                     {product.stock > 0 ? (
                       <span className="text-[9px] sm:text-[11px] text-green-600 font-medium flex items-center gap-0.5">

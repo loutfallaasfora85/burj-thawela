@@ -2,44 +2,27 @@ import Link from "next/link";
 
 const categories = [
   {
-    label: "شاشات",
-    desc: "LED & OLED",
-    image: "/cat1.webp",
-    href: "/products?subCategory=tvs",
+    label: "غرفة النوم",
+    icon: "bed",
+    desc: "طقم نوم ومراتب فاخرة",
+    image: "/bed.webp",
+    href: "/products?category=bedroom",
   },
   {
-    label: "تلاجات",
-    desc: "موفرة للطاقة",
-    image: "/cat2.webp",
-    href: "/products?subCategory=refrigerators",
+    label: "غرفة المعيشة",
+    icon: "weekend",
+    desc: "أثاث وديكور عصري",
+    image: "/hero.webp",
+    href: "/products?category=living_room",
   },
   {
-    label: "غسالات",
-    desc: "أوتوماتيك وشبه أوتوماتيك",
-    image: "/cat3.webp",
-    href: "/products?subCategory=washing_machines",
-  },
-  {
-    label: "مكيفات",
-    desc: "سبليت وشباك",
-    image: "/cat4.webp",
-    href: "/products?subCategory=air_conditioners",
-  },
-  {
-    label: "أفران",
-    desc: "كهربائية وغاز",
-    image: "/cat5.webp",
-    href: "/products?subCategory=ovens",
-  },
-  {
-    label: "أجهزة صغيرة",
-    desc: "خلاطات ومكانس",
-    image: "/cat6.webp",
-    href: "/products?subCategory=small_appliances",
+    label: "غرفة الطعام",
+    icon: "dining",
+    desc: "طاولات وكراسي أنيقة",
+    image: "/food.webp",
+    href: "/products?category=outdoor_furniture",
   },
 ];
-
-const doubled = [...categories, ...categories];
 
 export default function ProductCategories() {
   return (
@@ -49,27 +32,29 @@ export default function ProductCategories() {
         <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-on-surface">تسوق حسب القسم</h2>
       </div>
 
-      <div className="overflow-hidden">
-        <div className="flex gap-3 sm:gap-4 animate-scroll-right">
-          {doubled.map((cat, i) => (
-            <Link
-              key={i}
-              href={cat.href}
-              className="group relative flex-shrink-0 w-[140px] sm:w-[180px] md:w-[200px] h-[190px] sm:h-[240px] md:h-[260px] rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-shadow duration-300"
-            >
-              <img
-                src={cat.image}
-                alt={cat.label}
-                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
-              <div className="absolute bottom-0 right-0 left-0 p-3 sm:p-4">
-                <p className="text-white font-bold text-sm sm:text-base leading-tight">{cat.label}</p>
-                <p className="text-white/70 text-[11px] sm:text-xs mt-0.5">{cat.desc}</p>
-              </div>
-            </Link>
-          ))}
-        </div>
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+        {categories.map((cat) => (
+          <div key={cat.href} className="group relative rounded-2xl overflow-hidden shadow-sm border border-gray-100 h-[260px] sm:h-[320px]">
+            <img
+              src={cat.image}
+              alt={cat.label}
+              className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+            <div className="absolute inset-0 flex flex-col justify-end p-5 sm:p-6">
+              <span className="material-symbols-outlined text-white/80 text-[32px] mb-2">{cat.icon}</span>
+              <h3 className="text-white font-bold text-lg sm:text-xl mb-1">{cat.label}</h3>
+              <p className="text-white/70 text-xs sm:text-sm mb-4">{cat.desc}</p>
+              <Link
+                href={cat.href}
+                className="inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 backdrop-blur-sm border border-white/30 text-white text-xs sm:text-sm font-semibold px-4 py-2 rounded-xl transition-all w-fit"
+              >
+                تسوق الآن
+                <span className="material-symbols-outlined text-[16px]">arrow_back</span>
+              </Link>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );

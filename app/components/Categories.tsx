@@ -15,10 +15,10 @@ const categories = [
   //   slug: "bedroom",
   // },
   {
-    name: "أجهزة منزلية",
-    desc: "تلفزيون ومكيف وأكثر",
-    image: "/hhhhh.webp",
-    slug: "home_devices",
+    name: "مفروشات منزلية",
+    desc: "غرف نوم ومعيشة وأكثر",
+    image: "/bed.webp",
+    slug: "bedroom",
   },
 ];
 

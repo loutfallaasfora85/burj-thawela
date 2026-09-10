@@ -19,12 +19,10 @@ interface Product {
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
 
 const SUBCATEGORY_LABELS: Record<string, string> = {
-  tvs: "شاشات",
-  refrigerators: "تلاجات",
-  washing_machines: "غسالات",
-  air_conditioners: "مكيفات",
-  ovens: "أفران",
-  small_appliances: "أجهزة صغيرة",
+  bedroom: "غرف نوم",
+  living_room: "غرف معيشة",
+  office_furniture: "أثاث مكتبي",
+  outdoor_furniture: "أثاث خارجي",
 };
 
 export default function FeaturedProducts() {
@@ -40,7 +38,7 @@ export default function FeaturedProducts() {
       .then((data) => {
         const products: Product[] = data.data || [];
         setAllProducts(products);
-        const homeDevices = products.filter((p) => p.category === "home_devices" && p.price >= 1000);
+        const homeDevices = products.filter((p) => ["bedroom", "living_room", "office_furniture", "outdoor_furniture"].includes(p.category));
         const shuffled = [...homeDevices].sort(() => Math.random() - 0.5).slice(0, 6);
         setRandomHomeDevices(shuffled);
       })
@@ -64,14 +62,14 @@ export default function FeaturedProducts() {
     }, 1500);
   };
 
-  const featured = [...allProducts.filter((p) => p.category === "home_devices" && p.price >= 1000)].sort(() => Math.random() - 0.5).slice(0, 6);
+  const featured = [...allProducts.filter((p) => ["bedroom", "living_room", "office_furniture", "outdoor_furniture"].includes(p.category))].sort(() => Math.random() - 0.5).slice(0, 6);
 
   const VISIBLE_CATEGORIES = Object.keys(SUBCATEGORY_LABELS);
 
   const categoryMap = new Map<string, Product[]>();
   for (const p of allProducts) {
-    if (p.category !== "home_devices") continue;
-    const key = p.subCategory || "other";
+    if (!["bedroom", "living_room", "office_furniture", "outdoor_furniture"].includes(p.category)) continue;
+    const key = p.category;
     if (!categoryMap.has(key)) categoryMap.set(key, []);
     categoryMap.get(key)!.push(p);
   }
@@ -83,8 +81,8 @@ export default function FeaturedProducts() {
       products: [...products].sort((a, b) => b.price - a.price).slice(0, 6),
     }))
     .sort((a, b) => {
-      if (a.key === "small_appliances") return 1;
-      if (b.key === "small_appliances") return -1;
+      if (a.key === "outdoor_furniture") return 1;
+      if (b.key === "outdoor_furniture") return -1;
       return 0;
     });
 
@@ -108,7 +106,7 @@ export default function FeaturedProducts() {
         <div>
           <div className="border-t border-gray-100 my-2" />
           <section className="py-8 sm:py-12 md:py-16">
-            <SectionHeader title="أجهزة منزلية" href="/products?category=home_devices" />
+            <SectionHeader title="مفروشات منزلية" href="/products" />
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-3 sm:gap-5">
               {randomHomeDevices.map((p) => (
                 <ProductCard key={p._id} product={p} addedId={addedId} onAdd={handleAdd} />
