@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import WhatsAppButton from "../components/WhatsAppButton";
 
 export const metadata = {
-  title: "سياسة الاسترجاع | برج المبدع للأجهزة المنزلية",
+  title: "سياسة الاسترجاع | برج المبدع للأثاث المنزلي",
 };
 
 export default function ReturnPolicyPage() {
@@ -22,7 +22,7 @@ export default function ReturnPolicyPage() {
             سياسة الاسترجاع
           </h1>
           <p className="text-sm sm:text-base text-on-surface-variant mt-3 max-w-md mx-auto leading-relaxed">
-            نحن في برج المبدع للأجهزة المنزلية نسعى دائمًا لضمان رضا عملائنا. إذا لم تكن راضيًا عن عملية الشراء، يمكنك استبدال أو استرجاع المنتجات وفقًا للشروط التالية:
+            نحن في برج المبدع للأثاث المنزلي نسعى دائمًا لضمان رضا عملائنا. إذا لم تكن راضيًا عن عملية الشراء، يمكنك استبدال أو استرجاع المنتجات وفقًا للشروط التالية:
           </p>
         </div>
 
@@ -83,7 +83,7 @@ export default function ReturnPolicyPage() {
             <ul className="space-y-2.5 pr-2">
               <li className="flex items-start gap-2.5 text-[13px] sm:text-[15px] text-on-surface-variant leading-relaxed">
                 <span className="material-symbols-outlined text-[16px] mt-0.5 shrink-0 text-red-500">close</span>
-                <span>الأجهزة الإلكترونية التي تم فتحها أو استخدامها</span>
+                <span>الأثاث المنزلي التي تم فتحها أو استخدامها</span>
               </li>
               <li className="flex items-start gap-2.5 text-[13px] sm:text-[15px] text-on-surface-variant leading-relaxed">
                 <span className="material-symbols-outlined text-[16px] mt-0.5 shrink-0 text-red-500">close</span>
