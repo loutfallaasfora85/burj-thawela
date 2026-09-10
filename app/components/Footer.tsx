@@ -8,9 +8,9 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="col-span-2 lg:col-span-1">
-            <h3 className="text-base sm:text-lg md:text-xl font-bold text-white mb-2 md:mb-3">برج المبدع للأجهزة المنزلية</h3>
+            <h3 className="text-base sm:text-lg md:text-xl font-bold text-white mb-2 md:mb-3">برج المبدع للأثاث المنزلي</h3>
             <p className="text-gray-400 leading-relaxed text-xs sm:text-sm mb-4">
-              وجهتك الأولى للأجهزة المنزلية في المملكة العربية السعودية — جودة تثق بها بسعر يناسبك.
+              وجهتك الأولى للأثاث المنزلي في المملكة العربية السعودية — جودة تثق بها بسعر يناسبك.
             </p>
             <div className="bg-gray-800 rounded-xl p-3 border border-gray-700 inline-block">
               <div className="flex items-center gap-2 mb-1">
@@ -86,7 +86,7 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="pt-5 sm:pt-6 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs sm:text-sm text-gray-500">
-          <span>© 2026 برج المبدع للأجهزة المنزلية. جميع الحقوق محفوظة</span>
+          <span>© 2026 برج المبدع للأثاث المنزلي. جميع الحقوق محفوظة</span>
           <span className="text-gray-600">المملكة العربية السعودية 🇸🇦</span>
         </div>
       </div>
